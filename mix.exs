@@ -35,8 +35,6 @@ defmodule MySuperApp.MixProject do
     [
       {:phoenix, "~> 1.7.11"},
       {:phoenix_ecto, "~> 4.4"},
-      {:ecto_sql, "~> 3.10"},
-      {:postgrex, ">= 0.0.0"},
       {:phoenix_html, "~> 3.3"},
       {:phoenix_live_reload, "~> 1.2", only: :dev},
       {:phoenix_live_view, "~> 0.20.2"},
@@ -60,7 +58,9 @@ defmodule MySuperApp.MixProject do
       {:dns_cluster, "~> 0.1.1"},
       {:bandit, "~> 1.2"},
       {:moon, git: "https://github.com/coingaming/moon.git"},
-      {:surface, "~> 0.11.0"}
+      {:surface, "~> 0.11.0"},
+      {:ecto_sql, "~> 3.11"},
+      {:postgrex, "~> 0.17.4"}
     ]
   end
 
@@ -72,15 +72,14 @@ defmodule MySuperApp.MixProject do
   # See the documentation for `Mix` for more info on aliases.
   defp aliases do
     [
-    setup: ["deps.get", "assets.setup", "assets.build"],
-    "assets.setup": ["cmd --cd assets npm i", "esbuild.install --if-missing"],
-    "assets.build": ["cmd --cd assets npm run build", "esbuild default"],
-    "assets.deploy": [
-      "cmd --cd assets npm run deploy",
-      "NODE_ENV=production esbuild default --minify",
-      "phx.digest"
+      setup: ["deps.get", "assets.setup", "assets.build"],
+      "assets.setup": ["cmd --cd assets npm i", "esbuild.install --if-missing"],
+      "assets.build": ["cmd --cd assets npm run build", "esbuild default"],
+      "assets.deploy": [
+        "cmd --cd assets npm run deploy",
+        "NODE_ENV=production esbuild default --minify",
+        "phx.digest"
       ]
     ]
   end
-
 end

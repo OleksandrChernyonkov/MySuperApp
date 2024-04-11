@@ -18,6 +18,12 @@ defmodule MySuperAppWeb.Router do
     pipe_through :browser
 
     live("/", HomeLive)
+
+    live("/tabs", Tabs)
+
+    live("/acc", Acc)
+
+    live("/menu", Menu)
   end
 
   # Other scopes may use custom stacks.

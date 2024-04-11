@@ -32,7 +32,7 @@ defmodule MySuperAppWeb.Endpoint do
     only: ~w(assets themes images fonts svgs favicon.ico robots.txt),
     cache_control_for_etags: "public, max-age=86400"
   )
-  
+
   plug(Plug.Static,
     at: "/moon_icons/",
     from: :moon_icons,
