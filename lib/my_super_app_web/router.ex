@@ -24,6 +24,10 @@ defmodule MySuperAppWeb.Router do
     live("/acc", Acc)
 
     live("/menu", Menu)
+
+    live("/form", Form)
+
+    live("/users", UsersPage)
   end
 
   # Other scopes may use custom stacks.

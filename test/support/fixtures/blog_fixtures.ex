@@ -11,20 +11,6 @@ defmodule MySuperApp.BlogFixtures do
     {:ok, post} =
       attrs
       |> Enum.into(%{
-        title: "some title"
-      })
-      |> MySuperApp.Blog.create_post()
-
-    post
-  end
-
-  @doc """
-  Generate a post.
-  """
-  def post_fixture(attrs \\ %{}) do
-    {:ok, post} =
-      attrs
-      |> Enum.into(%{
         body: "some body",
         title: "some title"
       })

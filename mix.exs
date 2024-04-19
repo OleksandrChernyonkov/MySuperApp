@@ -37,7 +37,7 @@ defmodule MySuperApp.MixProject do
       {:phoenix_ecto, "~> 4.4"},
       {:phoenix_html, "~> 3.3"},
       {:phoenix_live_reload, "~> 1.2", only: :dev},
-      {:phoenix_live_view, "~> 0.20.2"},
+      {:phoenix_live_view, "~> 0.19.5"},
       {:floki, ">= 0.30.0", only: :test},
       {:phoenix_live_dashboard, "~> 0.8.3"},
       {:esbuild, "~> 0.8", runtime: Mix.env() == :dev},
@@ -57,8 +57,8 @@ defmodule MySuperApp.MixProject do
       {:jason, "~> 1.2"},
       {:dns_cluster, "~> 0.1.1"},
       {:bandit, "~> 1.2"},
-      {:moon, git: "https://github.com/coingaming/moon.git"},
-      {:surface, "~> 0.11.0"},
+      {:moon, "~> 2.81"},
+      {:surface, "0.11.1"},
       {:ecto_sql, "~> 3.11"},
       {:postgrex, "~> 0.17.4"}
     ]
